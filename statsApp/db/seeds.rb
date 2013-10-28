@@ -9,7 +9,7 @@
 url = ["http://apple.com", "https://apple.com", "https://www.apple.com", "http://developer.apple.com", "http://en.wikipedia.org", "http://opensource.org"]
 referrer = ["http://apple.com", "https://apple.com", "https://www.apple.com", "http://developer.apple.com", "NULL"]
 
-0.upto(50) do |i|
+0.upto(1000) do |i|
    UrlLogs.create(
     :url => url[rand(url.length)],
     :referrer => referrer[rand(referrer.length)],
