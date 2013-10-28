@@ -7,4 +7,8 @@ class UrlLogs < Sequel::Model
     self.save
   end
   
+  def as_json(options = {})
+  # minimal
+  super
+	end
 end
