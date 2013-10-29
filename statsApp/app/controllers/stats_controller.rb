@@ -43,6 +43,6 @@ class StatsController < ApplicationController
  		h[log[:created_at]] ||= [] #define if nil
     	h[log[:created_at]] << {:url => log[:url],:visits => log[:count],:referrer => @ref[log[:url]]} #append new value
     end
-    render :json => data.to_json
+    render :json => h.to_json
   end
 end
