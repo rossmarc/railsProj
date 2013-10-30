@@ -6,9 +6,5 @@ class UrlLogs < Sequel::Model
     self.set(:serialized => hash)
     self.save
   end
-  
-  def as_json(options = {})
-  # minimal
-  super
-	end
+
 end
