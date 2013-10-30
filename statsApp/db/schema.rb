@@ -12,11 +12,15 @@ Sequel.migration do
       column :referrer, "varchar(255)"
       column :created_at, "date"
       column :serialized, "varchar(255)"
+      
+      index [:created_at]
+      index [:created_at, :url, :referrer]
     end
   end
 end
 Sequel.migration do
   change do
     self << "INSERT INTO `schema_migrations` (`filename`) VALUES ('20131027165336_url_logs.rb')"
+    self << "INSERT INTO `schema_migrations` (`filename`) VALUES ('20131030082036_add_indexes.rb')"
   end
 end

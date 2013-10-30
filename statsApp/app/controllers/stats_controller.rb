@@ -24,7 +24,7 @@ class StatsController < ApplicationController
 			where (
 	   		SELECT COUNT(*) FROM ("+query+") as u
 			where u.created_at = t1.created_at and u.url <= t1.url
-			) <= 4;
+			) <= 10;
 		")
 	
     viewsUrl.each do |log| 

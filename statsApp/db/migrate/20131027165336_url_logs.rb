@@ -1,6 +1,5 @@
 Sequel.migration do 
-  change do
-
+  up do
     create_table :url_logs do
       primary_key :id
       String :url
@@ -8,6 +7,9 @@ Sequel.migration do
       Datetime :created_at
       String :serialized
     end
-
+  end
+  
+  down do
+  	drop_table(:url_logs)
   end
 end
